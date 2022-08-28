@@ -10,10 +10,9 @@ import CoreData
 
 struct ContentView: View {
     
-    private var fourColumnGrid = [GridItem(.flexible()),  GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
+    private var threeColumnGrid = [GridItem(.flexible()),  GridItem(.flexible()),GridItem(.flexible())]
     
-    private var sixColumnGrid = [GridItem(.flexible()),  GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()),
-        GridItem(.flexible()),GridItem(.flexible())]
+    private var fourColumnGrid = [GridItem(.flexible()),  GridItem(.flexible()), GridItem(.flexible()),GridItem(.flexible())]
     
     @State var cards = createCardlist().shuffled()
     @State var MatchedCards = [Card]()
@@ -25,16 +24,22 @@ struct ContentView: View {
                 Text("Ocean Memory 🌊")
                     .font(.largeTitle )
                 
-                LazyVGrid(columns: fourColumnGrid, spacing:10){
+                LazyVGrid(columns: threeColumnGrid, spacing: 10) {
                     ForEach(cards) {card in
-                        SwiftUIView(card: card, width:Int(geo.size.width/4 - 10), MatchedCards: $MatchedCards,Userchoices:$UserChoices)
+                       CardView(card: card,
+                                width: Int(geo.size.width/4 - 10),
+                                MatchedCards:$MatchedCards,Userchoices:$UserChoices)
                     }
+               
                 VStack{
-                    Text("Match these cards:")
-                    LazyVGrid(columns: sixColumnGrid, spacing:5){
-                        ForEach (cardvalues, id:\.self){cardvalue in if !MatchedCards.contains(where: {$0.text == cardvalue}){
-                            Text(cardvalue)
-                                .font(.system(size: 40))
+                    Text("Match these cards to win:")
+                    LazyVGrid(columns: fourColumnGrid, spacing: 20){
+                        ForEach (cardvalues, id:\.self) {
+                            cardvalue in
+                            if !MatchedCards.contains(where: {$0.text == cardvalue}){
+                                Text(cardvalue)
+                                    .font(.system(size: 40))
+                                
                   }
                }
             }

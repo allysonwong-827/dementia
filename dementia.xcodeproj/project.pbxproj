@@ -16,6 +16,8 @@
 		38FC6E3E28BA63C2006A1FE1 /* dementiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC6E3D28BA63C2006A1FE1 /* dementiaTests.swift */; };
 		38FC6E4828BA63C2006A1FE1 /* dementiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC6E4728BA63C2006A1FE1 /* dementiaUITests.swift */; };
 		38FC6E4A28BA63C2006A1FE1 /* dementiaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC6E4928BA63C2006A1FE1 /* dementiaUITestsLaunchTests.swift */; };
+		38FC6E5728BA652F006A1FE1 /* Dementia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC6E5628BA652F006A1FE1 /* Dementia.swift */; };
+		38FC6E5928BA6AB9006A1FE1 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC6E5828BA6AB9006A1FE1 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		38FC6E4328BA63C2006A1FE1 /* dementiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dementiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FC6E4728BA63C2006A1FE1 /* dementiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dementiaUITests.swift; sourceTree = "<group>"; };
 		38FC6E4928BA63C2006A1FE1 /* dementiaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dementiaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		38FC6E5628BA652F006A1FE1 /* Dementia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dementia.swift; sourceTree = "<group>"; };
+		38FC6E5828BA6AB9006A1FE1 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				38FC6E2728BA63C0006A1FE1 /* dementiaApp.swift */,
+				38FC6E5628BA652F006A1FE1 /* Dementia.swift */,
 				38FC6E2928BA63C0006A1FE1 /* ContentView.swift */,
+				38FC6E5828BA6AB9006A1FE1 /* CardView.swift */,
 				38FC6E2B28BA63C2006A1FE1 /* Assets.xcassets */,
 				38FC6E3028BA63C2006A1FE1 /* Persistence.swift */,
 				38FC6E3228BA63C2006A1FE1 /* dementia.xcdatamodeld */,
@@ -265,6 +271,8 @@
 			files = (
 				38FC6E3428BA63C2006A1FE1 /* dementia.xcdatamodeld in Sources */,
 				38FC6E3128BA63C2006A1FE1 /* Persistence.swift in Sources */,
+				38FC6E5928BA6AB9006A1FE1 /* CardView.swift in Sources */,
+				38FC6E5728BA652F006A1FE1 /* Dementia.swift in Sources */,
 				38FC6E2A28BA63C0006A1FE1 /* ContentView.swift in Sources */,
 				38FC6E2828BA63C0006A1FE1 /* dementiaApp.swift in Sources */,
 			);
