@@ -21,7 +21,7 @@ struct CardView: View {
     var body: some View {
         if card.isfaceUP || MatchedCards.contains(where: {$0.id == card.id}) {
             Text(card.text)
-            .font(.system(size:50))
+            .font(.system(size:35))
             .padding()
             .frame(width: CGFloat(width), height: CGFloat(width))
             .background(Color(red:0.68, green:0.83, blue:0.96))

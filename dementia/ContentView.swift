@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  dementia
-//
-//  Created by Allyson Wong on 27/8/2022.
-//
-
 import SwiftUI
 import CoreData
 
@@ -13,6 +6,8 @@ struct ContentView: View {
     private var threeColumnGrid = [GridItem(.flexible()),  GridItem(.flexible()),GridItem(.flexible())]
     
     private var fourColumnGrid = [GridItem(.flexible()),  GridItem(.flexible()), GridItem(.flexible()),GridItem(.flexible())]
+    
+    private var sixColumnGrid = [GridItem(.flexible(), spacing: 25),GridItem(.flexible(), spacing: 25),GridItem(.flexible(), spacing: 25),GridItem(.flexible(), spacing: 25),GridItem(.flexible(), spacing: 25),GridItem(.flexible(), spacing: 25)]
     
     @State var cards = createCardlist().shuffled()
     @State var MatchedCards = [Card]()
@@ -32,14 +27,18 @@ struct ContentView: View {
                     }
                
                 VStack{
-                    Text("Match these cards to win:")
-                    LazyVGrid(columns: fourColumnGrid, spacing: 20){
+                    Text("Match these cards:")
+                        .font(.system(size:10))
+                        .frame(width: 300, height: 10)
+                    Spacer()
+                    LazyVGrid(columns: sixColumnGrid, spacing: 10){
                         ForEach (cardvalues, id:\.self) {
                             cardvalue in
                             if !MatchedCards.contains(where: {$0.text == cardvalue}){
                                 Text(cardvalue)
-                                    .font(.system(size: 40))
-                                
+                                    .font(.title)
+                                    .frame(width: 50, height: 50, alignment: .center)
+                                    
                   }
                }
             }
